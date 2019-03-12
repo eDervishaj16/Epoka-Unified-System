@@ -1,0 +1,56 @@
+MasterEIS
+
+Users:
+    1. Student
+    2. Professor
+
+Primary Functionality - Shared:
+    1. Log In
+    2. Sign Up
+
+Primary Functionality - Studentë:
+    1. Choose Subjects
+    2. Edit Subjects
+    3. Display Timetabe (Bus and Subjects)
+    4. Edit Timetable (Subjects)
+    5. Notifications
+        a. Deadlines
+        b. Upcoming Events (only for selected subjects)
+            - Tests
+            - Quiz
+            - Projects
+            - Presantations
+        c. Bus Arrivals/Departures (*Toggeled On/Off*)
+        d. Attendance (Calculate if I have enough attendance given the remaining hours)
+        e. Personalized Events
+    6. Acess in:
+        a. Grades
+        b. Attendance
+    7. Calendar
+        a. Display all the nofitications (with colors) monthly.
+
+Primary Functionality - Professors:
+    1. Create subjects
+        - Name
+        - Code
+        - Timetable for the subject
+        - Evaluation Schema
+    2. Edit Subjects
+        - Insert course material (Sorted in a week basis)
+    3. Create Events
+        - Event types 
+            a. Tests
+            b. Quiz
+            c. Project 
+            d. Presentation
+    4. Create Reminders (Remind the professor to do something)
+
+------------------------------------------------------------------------------
+
+Technologies Used:
+      - React (for Desktop)
+      - React Native (Mobile)
+      - Node.js
+      - MongoDB
+      - Express
+      

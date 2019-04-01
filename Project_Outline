@@ -1,4 +1,4 @@
-MasterEIS
+EUS (Epoka Unified System)
 
 Users:
     1. Student
@@ -8,7 +8,7 @@ Primary Functionality - Shared:
     1. Log In
     2. Sign Up
 
-Primary Functionality - Studentë:
+Primary Functionality - Students:
     1. Choose Subjects
     2. Edit Subjects
     3. Display Timetabe (Bus and Subjects)

@@ -20,8 +20,10 @@ const UserSchema = new mongoose.Schema({
   role:{
     type:Number,
     default:3
+  },
+  courseslist: {
+    type: [mongoose.Schema.Types.ObjectId]
   }
-//Add class id array
 
 
 });

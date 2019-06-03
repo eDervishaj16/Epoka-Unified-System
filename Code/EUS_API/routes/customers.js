@@ -9,7 +9,7 @@ module.exports = server => {
   // Get Customers
   server.get('/customers', verifyApi, async (req, res, next) => {
 
-    if (req.role > 2) {
+    if (req.role > 3) {
       return next(new errors.UnauthorizedError("Role authorization problem"));
     }
 
@@ -28,6 +28,7 @@ module.exports = server => {
     rjwt({ secret: config.JWT_SECRET }), verifyApi, async (req, res, next) => {
       try {
         const customer = await Customer.findById(req.params.id);
+        console.log(customer);
         res.send(customer);
         next();
       } catch (err) {

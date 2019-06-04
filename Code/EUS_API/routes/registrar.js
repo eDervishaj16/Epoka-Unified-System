@@ -13,7 +13,7 @@ module.exports = server => {
         if (req.role > 1) {
             return next(new errors.UnauthorizedError("Role authorization problem"));
         }
-        //Add this to all apis
+
         if (!req.is('application/json')) {
             return next(
                 new errors.InvalidContentError("Expects 'application/json'")

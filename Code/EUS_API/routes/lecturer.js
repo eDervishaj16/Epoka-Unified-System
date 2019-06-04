@@ -8,6 +8,12 @@ const User = require('../models/User')
 module.exports = server => {
 
     server.post('/lecturer/postNotification', verifyApi, async (req, res, next) => {
+
+        if (!req.is('application/json')) {
+            return next(
+                new errors.InvalidContentError("Expects 'application/json'")
+            );
+        }
         if (req.role > 2) {
             return next(new errors.UnauthorizedError("Role authorization problem"));
         }
@@ -29,6 +35,15 @@ module.exports = server => {
 
 
     server.post('/lecturer/getTimetable', verifyApi, async (req, res, next) => {
+        if (!req.is('application/json')) {
+            return next(
+                new errors.InvalidContentError("Expects 'application/json'")
+            );
+        }
+        if (req.role > 2) {
+            return next(new errors.UnauthorizedError("Role authorization problem"));
+        }
+
         try {
             lec = await User.findById(req.userId, 'courseslist', (err) => {
                 if (err) return new errors.InternalError("Cannot find courses");
@@ -47,8 +62,17 @@ module.exports = server => {
 
 
     });
-    
+
     server.post('/lecturer/getCourseInfo', verifyApi, async (req, res, next) => {
+
+        if (!req.is('application/json')) {
+            return next(
+                new errors.InvalidContentError("Expects 'application/json'")
+            );
+        }
+        if (req.role > 2) {
+            return next(new errors.UnauthorizedError("Role authorization problem"));
+        }
         try {
             const courseId = req.body.courseId;
             query = await Course.findById(courseId, { students: 1 })
@@ -69,16 +93,16 @@ module.exports = server => {
 
         try {
             const courseid = req.body._id
-            const studentsid= req.body.studentsId;
-            gradeObj={grade:100,weight:100}
-            query=await Course.findById(courseid,{students:{$elemMatch:{id:studentsid}}});
-            // query=await Course.findOneAndUpdate(courseid,st)
-            // courseObj = await Course.updateMany({ _id: { $in: selectedCoursesList } }, { $push: { students: newstObj } });
-            
-            
-            
+            const studentsid = req.body.studentsId;
 
-            res.send(query);
+            gradeObj = req.body.grades;
+            query = await Course.findById(courseid, { students: { $elemMatch: { id: studentsid } } });
+
+            query.students[0].grade.push(gradeObj);
+
+            query.save();
+
+            res.send(201);
 
             next();
 
@@ -87,10 +111,36 @@ module.exports = server => {
         }
 
 
-        }
+    }
     );
 
-    
+
+    server.post('/lecturer/updateStudentAttendance', verifyApi, async (req, res, next) => {
+
+        try {
+            const courseid = req.body._id
+            const studentsid = req.body.studentsId;
+
+            attObj = [true, false, true];
+            query = await Course.findById(courseid, { students: { $elemMatch: { id: studentsid } } });
+            for (i = 0; i <= attObj.length - 1; i++) {
+                query.students[0].attendance.push(attObj[i]);
+            }
+            query.save();
+
+            res.send(query.students[0]);
+
+            next();
+
+        } catch (err) {
+            return next(new errors.InvalidContentError("Cannot find lecturer"));
+        }
+
+
+    }
+    );
+
+
 
 
 

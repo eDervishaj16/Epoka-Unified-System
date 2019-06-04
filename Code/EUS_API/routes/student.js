@@ -8,6 +8,12 @@ module.exports = server => {
 
     server.post('/student/getCourses', verifyApi, async (req, res, next) => {
 
+        if (!req.is('application/json')) {
+            return next(
+                new errors.InvalidContentError("Expects 'application/json'")
+            );
+        }
+
         try {
 
             query = await Course.find({}, '_id name ', (err) => {
@@ -25,10 +31,16 @@ module.exports = server => {
 
     server.post('/student/setCourses', verifyApi, async (req, res, next) => {
 
+        if (!req.is('application/json')) {
+            return next(
+                new errors.InvalidContentError("Expects 'application/json'")
+            );
+        }
+
         try {
 
             selectedCoursesList = req.body.courseslist;
-            console.log(selectedCoursesList);
+
             const studentObj = await User.findByIdAndUpdate(req.userId, { $set: { "courseslist": selectedCoursesList } });
             newstObj = { id: req.userId }
             courseObj = await Course.updateMany({ _id: { $in: selectedCoursesList } }, { $push: { students: newstObj } });
@@ -46,6 +58,12 @@ module.exports = server => {
 
 
     server.post('/student/getNotification', verifyApi, async (req, res, next) => {
+
+        if (!req.is('application/json')) {
+            return next(
+                new errors.InvalidContentError("Expects 'application/json'")
+            );
+        }
 
         try {
             student = await User.findById(req.userId, 'courseslist', (err) => {
@@ -69,6 +87,12 @@ module.exports = server => {
     });
 
     server.post('/student/getTimetable', verifyApi, async (req, res, next) => {
+
+        if (!req.is('application/json')) {
+            return next(
+                new errors.InvalidContentError("Expects 'application/json'")
+            );
+        }
         try {
             student = await User.findById(req.userId, 'courseslist', (err) => {
                 if (err) return new errors.InternalError("Cannot find courses");
@@ -88,22 +112,23 @@ module.exports = server => {
 
     });
 
-    //Needs retesting
+
 
     server.post('/student/getCourseInfo', verifyApi, async (req, res, next) => {
+
+        if (!req.is('application/json')) {
+            return next(
+                new errors.InvalidContentError("Expects 'application/json'")
+            );
+        }
 
         try {
             student = await User.findById(req.userId, 'courseslist', (err) => {
                 if (err) return new errors.InternalError("Cannot find courses");
             });
             courseList = student.courseslist;
-           
-            
-           
 
-            
-            query = await Course.find({ _id: {$in:courseList} },{students:{$elemMatch:{id:req.userId}}});
-
+            query = await Course.find({ _id: { $in: courseList } }, { students: { $elemMatch: { id: req.userId } } });
 
             res.send(query);
             next();

@@ -2,7 +2,7 @@ const restify = require('restify');
 const mongoose = require('mongoose');
 const config = require('./config');
 
-
+//mongodb pass bB6nA8B6PFJxV-j
 const server = restify.createServer();
 
 // Middleware
@@ -24,7 +24,7 @@ db.on('error', err => console.log(err));
 
 db.once('open', () => {
 
-  let cus = require('./routes/customers')(server);
+
   let user = require('./routes/users')(server);
   let stud = require('./routes/student')(server);
   let registr = require('./routes/registrar')(server);

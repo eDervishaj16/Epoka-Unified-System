@@ -24,9 +24,10 @@ db.on('error', err => console.log(err));
 
 db.once('open', () => {
 
-  var cus = require('./routes/customers')(server);
-  var user = require('./routes/users')(server);
-  var stud = require('./routes/student')(server);
-  var registr = require('./routes/registrar')(server);
+  let cus = require('./routes/customers')(server);
+  let user = require('./routes/users')(server);
+  let stud = require('./routes/student')(server);
+  let registr = require('./routes/registrar')(server);
+  let lect = require('./routes/lecturer')(server);
   console.log(`Server started on port ${config.PORT}`);
 });

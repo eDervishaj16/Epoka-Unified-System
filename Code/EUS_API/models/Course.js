@@ -1,5 +1,24 @@
 const mongoose = require('mongoose');
 
+notificationObj = {
+  message: String,
+  date: {
+    type: Date,
+    default: Date.now
+  }
+};
+studentObj = {
+  id: mongoose.Schema.Types.ObjectId,
+  grade: [{
+    grade: Number,
+    weight: Number,
+  }],
+  attendance: [Boolean]
+}
+
+
+
+
 
 const CourseSchema = new mongoose.Schema({
   name: {
@@ -25,13 +44,13 @@ const CourseSchema = new mongoose.Schema({
   },
 
   students: {
-    type: [mongoose.Schema.Types.ObjectId]
+    type: [studentObj]
   },
   notifications: {
-    type: [mongoose.Schema.Types.ObjectId]
+    type: [notificationObj]
   },
-  timetable: [],
-  
+  timetable: []
+
 
 
 });

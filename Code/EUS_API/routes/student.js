@@ -1,23 +1,21 @@
-const config = require('../config');
+
 const verifyApi = require('../VerifyApi');
 const errors = require('restify-errors');
 const Course = require('../models/Course');
+const User = require('../models/User');
 
 module.exports = server => {
 
-    server.post('/getCourses', verifyApi, async (req, res, next) => {
+    server.post('/student/getCourses', verifyApi, async (req, res, next) => {
 
         try {
 
-            query = await Course.find({});
+            query = await Course.find({}, '_id name ', (err) => {
+                if (err) return new errors.InternalError("Cannot find course");
+            });
 
-            newQuery = [];
-            for (i = 0; i < query.length; i++) {
-                newQuery.push([query[i].name, query[i]._id]);
-
-            }
-            res.send(newQuery)
-            next()
+            res.send(query);
+            next();
         } catch (err) {
             return next(new errors.InvalidContentError("Cannot get Courses"));
         }
@@ -25,21 +23,95 @@ module.exports = server => {
 
     });
 
+    server.post('/student/setCourses', verifyApi, async (req, res, next) => {
+
+        try {
+
+            selectedCoursesList = req.body.courseslist;
+            console.log(selectedCoursesList);
+            const studentObj = await User.findByIdAndUpdate(req.userId, { $set: { "courseslist": selectedCoursesList } });
+            newstObj = { id: req.userId }
+            courseObj = await Course.updateMany({ _id: { $in: selectedCoursesList } }, { $push: { students: newstObj } });
 
 
-    server.post('/getNotification', verifyApi, async (req, res, next) => {
+            res.send();
+            next();
+        } catch (err) {
+            return next(new errors.InvalidContentError("Cannot set Courses"));
+        }
 
 
     });
 
-    server.post('/getTimetable', verifyApi, async (req, res, next) => {
+
+
+    server.post('/student/getNotification', verifyApi, async (req, res, next) => {
+
+        try {
+            student = await User.findById(req.userId, 'courseslist', (err) => {
+                if (err) return new errors.InternalError("Cannot find courses");
+            });
+            courseList = student.courseslist;
+
+
+            query = await Course.find({ _id: { $in: courseList } }, 'notifications');
+
+            res.send(query);
+            next();
+
+        } catch (err) {
+            return next(new errors.InvalidContentError("Cannot find student"));
+        }
+
+
 
 
     });
 
+    server.post('/student/getTimetable', verifyApi, async (req, res, next) => {
+        try {
+            student = await User.findById(req.userId, 'courseslist', (err) => {
+                if (err) return new errors.InternalError("Cannot find courses");
+            });
+            courseList = student.courseslist;
 
 
-    server.post('/getCourseInfo', verifyApi, async (req, res, next) => {
+            timetablequery = await Course.find({ _id: { $in: courseList } }, 'timetable');
+
+            res.send(timetablequery);
+            next();
+
+        } catch (err) {
+            return next(new errors.InvalidContentError("Cannot find student"));
+        }
+
+
+    });
+
+    //Needs retesting
+
+    server.post('/student/getCourseInfo', verifyApi, async (req, res, next) => {
+
+        try {
+            student = await User.findById(req.userId, 'courseslist', (err) => {
+                if (err) return new errors.InternalError("Cannot find courses");
+            });
+            courseList = student.courseslist;
+           
+            
+           
+
+            
+            query = await Course.find({ _id: {$in:courseList} },{students:{$elemMatch:{id:req.userId}}});
+
+
+            res.send(query);
+            next();
+
+        } catch (err) {
+            return next(new errors.InvalidContentError("Cannot find student"));
+        }
+
 
 
     });

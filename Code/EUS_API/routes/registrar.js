@@ -1,8 +1,5 @@
 
-const jwt = require('jsonwebtoken');
 const Course = require('../models/Course');
-const auth = require('../auth');
-const config = require('../config');
 const verifyApi = require('../VerifyApi');
 const errors = require('restify-errors');
 const User = require('../models/User')
@@ -16,14 +13,14 @@ module.exports = server => {
         if (req.role > 1) {
             return next(new errors.UnauthorizedError("Role authorization problem"));
         }
-
+        //Add this to all apis
         if (!req.is('application/json')) {
             return next(
                 new errors.InvalidContentError("Expects 'application/json'")
             );
         }
 
-        const { name, faculty, department, lecturer,timetable } = req.body;
+        const { name, faculty, department, lecturer, timetable } = req.body;
 
         const cl = new Course({
             name,
@@ -42,9 +39,9 @@ module.exports = server => {
         }
 
         try {
-            
-            const updateLec = await User.findById(lecturer)          
-            updateLec.courseslist.push(cl.id);          
+
+            const updateLec = await User.findById(lecturer)
+            updateLec.courseslist.push(cl.id);
             updateLec.save();
 
         } catch (err) {
@@ -52,7 +49,7 @@ module.exports = server => {
         }
 
 
-      }
+    }
     );
 
 };

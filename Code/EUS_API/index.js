@@ -29,5 +29,6 @@ db.once('open', () => {
   let stud = require('./routes/student')(server);
   let registr = require('./routes/registrar')(server);
   let lect = require('./routes/lecturer')(server);
+  let admin = require('./routes/admin')(server);
   console.log(`Server started on port ${config.PORT}`);
 });

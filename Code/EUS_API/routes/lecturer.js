@@ -34,34 +34,7 @@ module.exports = server => {
 
 
 
-    server.post('/lecturer/getTimetable', verifyApi, async (req, res, next) => {
-        if (!req.is('application/json')) {
-            return next(
-                new errors.InvalidContentError("Expects 'application/json'")
-            );
-        }
-        if (req.role > 2) {
-            return next(new errors.UnauthorizedError("Role authorization problem"));
-        }
-
-        try {
-            lec = await User.findById(req.userId, 'courseslist', (err) => {
-                if (err) return new errors.InternalError("Cannot find courses");
-            });
-            courseList = lec.courseslist;
-
-
-            timetablequery = await Course.find({ _id: { $in: courseList } }, 'timetable');
-
-            res.send(timetablequery);
-            next();
-
-        } catch (err) {
-            return next(new errors.InvalidContentError("Cannot get timetable"));
-        }
-
-
-    });
+    
 
     server.post('/lecturer/getCourseInfo', verifyApi, async (req, res, next) => {
 
@@ -139,10 +112,5 @@ module.exports = server => {
 
     }
     );
-
-
-
-
-
 
 };

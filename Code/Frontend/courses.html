@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="courses.css" />
+    <link rel="stylesheet" type="text/css" href="sideMenu.css" />
+    <title>Epoka Unified System</title>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Side Menu -->
+        <div class="sidenav">
+            <!-- Logout Button -->
+            <div class="logout">
+                <button><img src="icons\logout.svg"></button>
+            </div>
+            <!-- Epoka Logo -->
+            <div class="logo">
+                <img src="icons\logo.svg">
+                <p>Epoka Unified Systems</p>
+            </div>
+
+            <!-- Side Menu Links -->
+            <a href="notifications.html">
+                <img src="icons\notificationsBold.svg">
+                Notifications
+            </a>
+            <a href="calendar.html">
+                <img src="icons\calendar.svg">
+                Calendar
+            </a>
+            <a href="timetable.html">
+                <img src="icons\timetable.svg">
+                Timetable
+            </a>
+            <a class="selected" href="courses.html">
+                <img src="icons\coursesBold.svg">
+                Courses
+            </a>
+            <a href="myProfile.html">
+                <img src="icons\myProfile.svg">
+                My Profile
+            </a>
+            <a href="setting.html">
+                <img src="icons\settings.svg">
+                Settings
+            </a>
+        </div>
+
+
+
+        <div class="main">
+            <div class="container">
+                <h1>My Courses</h1>
+                <hr>
+                <div class="leftSide">
+                    <div class="courseList">
+                        <table class="availableCourses">
+                            <tr class="title">
+                                <td colspan="5">Available Courses</td>
+                            </tr>
+                            <tr class="fields">
+                                <td class="name">Course Name</td>
+                                <td class="attendance">Attendance</td>
+                                <td class="maxGrade" colspan="2">Max. Grade</td>
+                            </tr>
+                            <tr class="course">
+                                <td class="name">Linear Algebra</td>
+                                <td class="attendance">66%</td>
+                                <td class="maxGradeNo">70</td>
+                                <td class="maxGradeLtr">CC</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="courseMaterials">
+
+                    </div>
+
+                </div>
+                <div class="courseExpanded">
+
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>

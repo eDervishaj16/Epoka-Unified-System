@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="login.css" />
+    <script type="text/javascript" src="register.js"></script>
+    <title>Epoka Unified System</title>
+</head>
+
+<body>
+    <div class="logo">
+        <a style="margin-left: 0px;" href="logIn.php"><img src="icons\logo.svg" class="logo"></a>
+    </div>
+    <div class="container">
+
+        <div class="fields">
+
+            <h1 class="signupH">Primary E-mail</h1>
+            
+            <!-- Select Major -->
+            <select style = "margin-bottom: 0px;" name="majors" class = "info">
+                <option value="" selected disabled hidden >Select Major</option>
+                <option value="ce">Civil Engineering</option>
+                <option value="cen">Computer Engineering</option>
+                <option value="arch">Architecture</option>
+                <option value="edc">Electronics and Digital Communication</option>
+                <option value="eco">Economics</option>
+                <option value="ba">Business Administration</option>
+                <option value="bi">Business Informatics</option>
+                <option value="bf">Banking and Finance</option>
+                <option value="bfa">Banking and Finance (Albanian)</option>
+                <option value="imlm">International Marketing and Logistics Management</option>
+                <option value="psir">Political Science and International Relations</option>
+                <option value="law">Law</option>
+            </select>
+
+
+
+
+            <input style = "margin-bottom: 0px; text-align: center" type="text" placeholder = "Student Number" class="info">
+            <input style = "margin-bottom: 0px; text-align: center" type="text" placeholder= "Card Issuance Date" class="info">
+
+
+            <input type="submit" value="Next">
+
+            <!-- Progress Bar (Dots) -->
+            <div style = "margin-top: -30px; " class="progress">
+                <span class="dot selected"></span>
+                <span class="dot selected"></span>
+                <span class="dot selected"></span>
+                <span class="dot selected"></span>
+                <span class="dot selected"></span>
+            </div>
+
+
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+<!--
+    TODO:
+        - Validate user input
+-->

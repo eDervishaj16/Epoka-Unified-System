@@ -1,0 +1,171 @@
+hr {
+    margin-top: -30px;
+    width: 98%;
+    margin-left: 0px;
+    margin-bottom: 15px;
+}
+
+h1 {
+    color: white;
+    font-size: 42px;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    background-color: #0088FF;
+}
+
+.main {
+    width: 85%;
+}
+
+.busTT {
+    margin-top: 10px;
+    margin-left: 50px;
+}
+
+label {
+    font-size: 25px;
+    color: white;
+    margin-right: 10px;
+}
+
+select {
+    padding-left: 10px;
+    font-size: 14px;
+    width: 180px;
+    height: 42px;
+    border-radius: 10px;
+    border: 1px solid #0B30A9;
+    box-shadow: 1px 1px 2px;
+    margin-right: 30px;
+}
+
+#bussHours {
+    padding: 0px;
+    border: 1px solid #0B30A9;
+    margin-top: 20px;
+    border-radius: 20px;
+    width: 98%;
+}
+
+.currDay {
+    color: white;
+    font-size: 20px;
+    border-radius: 20px 20px 0px 0px;
+    background-color: #0B30A9;
+    margin: 0px;
+    padding-top: 6px;
+    text-align: center;
+    height: 30px;
+}
+
+.hours {
+    display: flex;
+    background-color: white;
+    border-radius: 0px 0px 20px 20px;
+    text-align: center
+}
+
+.hr {
+    border: 1px solid #0B30A9;
+    background-color: #0B30A9;
+    color: white;
+    border-radius: 10px;
+    margin: 5px;
+    width: 50px;
+    height: 25px;
+    font-size: 18px;
+    text-align: center;
+    padding: 5px;
+}
+
+.todaySchedule {
+    margin-top: 10px;
+    margin-left: 50px;
+}
+
+.schedule {
+    padding: 0px;
+    border: 1px solid #0B30A9;
+    margin-top: 20px;
+    border-radius: 20px;
+    width: 98%;
+    margin-bottom: 10px;
+}
+
+.todayCourse {
+    display: flex;
+    background-color: white;
+    height: 100%;
+    border-radius: 0px 0px 20px 20px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.course {
+    margin-right: 15px;
+    width: fit-content;
+    color: white;
+    text-align: center;
+}
+
+.courseTime {
+    background-color: #0B30A9;
+    border-radius: 10px;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+.courseInfo {
+    margin-bottom: 10px;
+    background-color: #0B30A9;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.upcomingSchedule {
+    margin-top: 10px;
+    margin-left: 50px;
+}
+
+.day {
+    color: white;
+    font-size: 20px;
+    border-radius: 20px 20px 0px 0px;
+    background-color: #0B30A9;
+    margin: 0px;
+    padding-top: 6px;
+    text-align: center;
+    height: 30px;
+}
+
+.upcomingCourse {
+    display: flex;
+    background-color: white;
+    height: 100%;
+    border-radius: 0px 0px 20px 20px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.dayOff {
+    display: none;
+}
+
+.off {
+    background-color: #1A981E;
+    border: 1px solid #0F5611;
+}
+
+.passed {
+    opacity: 0.7;
+}
+
+.current {
+    background-color: #4ECDC4;
+    border-color: #30817B;
+}

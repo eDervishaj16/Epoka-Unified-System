@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel = "stylesheet" type = "text/css" href = "notifications.css" />
+    <link rel = "stylesheet" type = "text/css" href = "sideMenu.css" />
+    <title>Epoka Unified System</title>
+</head>
+
+<body>
+    <div class = "container">
+        <!-- Side Menu -->
+        <div class="sidenav">
+                <!-- Logout Button -->
+                <div class = "logout">
+                    <button><img src="icons\logout.svg"></button>
+                </div>
+                <!-- Epoka Logo -->
+                <div class = "logo">
+                    <img src="icons\logo.svg">
+                    <p>Epoka Unified Systems</p>
+                </div>
+
+                <!-- Side Menu Links -->
+                <a class = "selected" href="notifications.html">
+                    <img src="icons\notificationsBold.svg">
+                    Notifications
+                </a>
+                <a href="calendar.html">
+                    <img src="icons\calendar.svg">
+                    Calendar
+                </a>
+                <a href="timetable.html">
+                    <img src="icons\timetable.svg">
+                    Timetable
+                </a>
+                <a href="courses.html">
+                    <img src="icons\courses.svg">
+                    Courses
+                </a>
+                <a href="myProfile.html">
+                    <img src="icons\myProfile.svg">
+                    My Profile
+                </a>
+                <a href="setting.html">
+                    <img src="icons\settings.svg">
+                    Settings
+                </a>
+            </div>  
+            
+            <!--Main Page -->
+            <div class = "main">
+                <div class = "finishSoon">
+                    <h1>Finishing Soon</h1>
+                    <hr>
+                    <div class = "notifications">
+                        <div class = "entry">
+                            <h6 id = "course">Computer Networks</h6>
+                            <div id = "desc">
+                                There are many variations of passages of Lorem
+                                Ipsum available, but the majority have suffered
+                                alteration in some form, by injected humour, or
+                                randomised words which don't look even slightly 
+                                believable.
+                            </div>
+                            <p id = "cntdown">
+                                2:50:55
+                            </p>
+                            <div id = "statusBar">
+                                <div id = "remaining"></div>
+                            </div>     
+                        </div>
+                        <div class = "entry">
+                            <h6 id = "course">Computer Networks</h6>
+                            <div id = "desc">
+                                There are many variations of passages of Lorem
+                                Ipsum available, but the majority have suffered
+                                alteration in some form, by injected humour, or
+                                randomised words which don't look even slightly 
+                                believable.
+                            </div>
+                            <p id = "cntdown">
+                                2:50:55
+                            </p>
+                            <div id = "statusBar">
+                                <div id = "remaining"></div>
+                            </div>     
+                        </div>
+                        <div class = "entry">
+                            <h6 id = "course">Computer Networks</h6>
+                            <div id = "desc">
+                                There are many variations of passages of Lorem
+                                Ipsum available, but the majority have suffered
+                                alteration in some form, by injected humour, or
+                                randomised words which don't look even slightly 
+                                believable.
+                            </div>
+                            <p id = "cntdown">
+                                2:50:55
+                            </p>
+                            <div id = "statusBar">
+                                <div id = "remaining"></div>
+                            </div>     
+                        </div>
+                        <div class = "entry">
+                            <h6 id = "course">Computer Networks</h6>
+                            <div id = "desc">
+                                There are many variations of passages of Lorem
+                                Ipsum available, but the majority have suffered
+                                alteration in some form, by injected humour, or
+                                randomised words which don't look even slightly 
+                                believable.
+                            </div>
+                            <p id = "cntdown">
+                                2:50:55
+                            </p>
+                            <div id = "statusBar">
+                                <div id = "remaining"></div>
+                            </div>     
+                        </div>
+                        <div class = "entry">
+                            <h6 id = "course">Computer Networks</h6>
+                            <div id = "desc">
+                                There are many variations of passages of Lorem
+                                Ipsum available, but the majority have suffered
+                                alteration in some form, by injected humour, or
+                                randomised words which don't look even slightly 
+                                believable.
+                            </div>
+                            <p id = "cntdown">
+                                2:50:55
+                            </p>
+                            <div id = "statusBar">
+                                <div id = "remaining"></div>
+                            </div>     
+                        </div>
+                    </div>
+
+                </div>
+                <div class = "notifContainer">
+                    <h1>Notifications</h1>
+                    <hr>
+                    <div class = "filters">
+                        <label for="type">Show:</label>
+                        <select name="type" class = "info">
+                            <option value = "all" selected>All</option>
+                            <option value = "notifications">Notifications</option>
+                            <option value = "deadlines">Deadlines</option>
+                        </select>
+
+                        <label for="course">Course: </label>
+                        <select style = "width: 250px;" name="coursess" class = "info">
+                            <option value = "all" selected>All</option>
+                            <option value = "se">Software Engineering</option>
+                            <option value = "os">Operating Systems</option>
+                            <option value = "ai">Artificial Intelligence</option>
+                            <option value = "cs">Control Systems</option>
+                        </select>
+
+                        <input style = "width: 300px;" class = "info" type="text" placeholder = "Search Here...">
+                        <button class = "searchBtn" type="submit"><img style = "width: 30px;" src="icons\searchIcon.svg"></button>
+                    </div>
+
+                    <div class = "allNotifications">
+                        <div class = "entry larger">
+                                <h6 id = "course">Computer Networks</h6>
+                                <p class = "title">Shor Description Goes Here</p>
+                                <div id = "desc" class = "big">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                    Lorem Ipsum has been the industry's 
+                                    standard dummy text ever since the 1500s, when an unknown printer 
+                                    took a galley of type and scrambled it to make 
+                                    a type specimen book. It has survived not only five centuries, 
+                                    but also the leap into electronic typesetting, remaining essentially unchanged. 
+                                    It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
+                                    and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                </div>
+                                <p id = "cntdown">
+                                    2:50:55
+                                </p>
+                                <div id = "statusBar">
+                                    <div id = "remaining"></div>
+                                </div>     
+                        </div>
+                        <div class = "entry larger">
+                                <h6 id = "course">Computer Networks</h6>
+                                <p class = "title">Shor Description Goes Here</p>
+                                <div id = "desc" class = "big">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                    Lorem Ipsum has been the industry's 
+                                    standard dummy text ever since the 1500s, when an unknown printer 
+                                    took a galley of type and scrambled it to make 
+                                    a type specimen book. It has survived not only five centuries, 
+                                    but also the leap into electronic typesetting, remaining essentially unchanged. 
+                                    It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
+                                    and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                </div>
+                                <p id = "cntdown">
+                                    2:50:55
+                                </p>
+                                <div id = "statusBar">
+                                    <div id = "remaining"></div>
+                                </div>     
+                        </div>
+                        <div class = "entry larger">
+                                <h6 id = "course">Computer Networks</h6>
+                                <p class = "title">Shor Description Goes Here</p>
+                                <div id = "desc" class = "big">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                    Lorem Ipsum has been the industry's 
+                                    standard dummy text ever since the 1500s, when an unknown printer 
+                                    took a galley of type and scrambled it to make 
+                                    a type specimen book. It has survived not only five centuries, 
+                                    but also the leap into electronic typesetting, remaining essentially unchanged. 
+                                    It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
+                                    and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                </div>
+                                <p id = "cntdown">
+                                    2:50:55
+                                </p>
+                                <div id = "statusBar">
+                                    <div id = "remaining"></div>
+                                </div>     
+                        </div>
+                        <div class = "entry larger">
+                                <h6 id = "course">Computer Networks</h6>
+                                <p class = "title">Shor Description Goes Here</p>
+                                <div id = "desc" class = "big">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                    Lorem Ipsum has been the industry's 
+                                    standard dummy text ever since the 1500s, when an unknown printer 
+                                    took a galley of type and scrambled it to make 
+                                    a type specimen book. It has survived not only five centuries, 
+                                    but also the leap into electronic typesetting, remaining essentially unchanged. 
+                                    It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
+                                    and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                </div>
+                                <p id = "cntdown">
+                                    2:50:55
+                                </p>
+                                <div id = "statusBar">
+                                    <div id = "remaining"></div>
+                                </div>     
+                        </div>
+                        <div class = "entry larger">
+                                <h6 id = "course">Computer Networks</h6>
+                                <p class = "title">Shor Description Goes Here</p>
+                                <div id = "desc" class = "big">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                    Lorem Ipsum has been the industry's 
+                                    standard dummy text ever since the 1500s, when an unknown printer 
+                                    took a galley of type and scrambled it to make 
+                                    a type specimen book. It has survived not only five centuries, 
+                                    but also the leap into electronic typesetting, remaining essentially unchanged. 
+                                    It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
+                                    and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                </div>
+                                <p id = "cntdown">
+                                    2:50:55
+                                </p>
+                                <div id = "statusBar">
+                                    <div id = "remaining"></div>
+                                </div>     
+                        </div>
+                        <div class = "entry larger">
+                                <h6 id = "course">Computer Networks</h6>
+                                <p class = "title">Shor Description Goes Here</p>
+                                <div id = "desc" class = "big">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                    Lorem Ipsum has been the industry's 
+                                    standard dummy text ever since the 1500s, when an unknown printer 
+                                    took a galley of type and scrambled it to make 
+                                    a type specimen book. It has survived not only five centuries, 
+                                    but also the leap into electronic typesetting, remaining essentially unchanged. 
+                                    It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
+                                    and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                </div>
+                                <p id = "cntdown">
+                                    2:50:55
+                                </p>
+                                <div id = "statusBar">
+                                    <div id = "remaining"></div>
+                                </div>     
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+    </div>
+    
+</body>
+
+</html>

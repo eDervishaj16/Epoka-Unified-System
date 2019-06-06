@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel = "stylesheet" type = "text/css" href = "calendar.css" />
+    <link rel = "stylesheet" type = "text/css" href = "sideMenu.css" />
+    <title>Epoka Unified System</title>
+</head>
+
+<body>
+    <div class = "container">
+        <!-- Side Menu -->
+        <div class="sidenav">
+            <!-- Logout Button -->
+            <div class = "logout">
+                <button><img src="icons\logout.svg"></button>
+            </div>
+            <!-- Epoka Logo -->
+            <div class = "logo">
+                <img src="icons\logo.svg">
+                <p>Epoka Unified Systems</p>
+            </div>
+
+            <!-- Side Menu Links -->
+            <a href="notifications.html">
+                <img src="icons\notificationsBold.svg">
+                Notifications
+            </a>
+            <a class = "selected" href="calendar.html">
+                <img src="icons\calendarBold.svg">
+                Calendar
+            </a>
+            <a href="timetable.html">
+                <img src="icons\timetable.svg">
+                Timetable
+            </a>
+            <a href="courses.html">
+                <img src="icons\courses.svg">
+                Courses
+            </a>
+            <a href="myProfile.html">
+                <img src="icons\myProfile.svg">
+                My Profile
+            </a>
+            <a href="setting.html">
+                <img src="icons\settings.svg">
+                Settings
+            </a>
+        </div>
+
+
+
+        <div class = "main">
+            <!-- Calendar -->
+            <div class = "calendar" onload = "loadCurrMonth()">
+                
+                <div class = "month">
+                        <button class = "prevBtn"><img src="icons\previous.svg"></button>
+                        March 2019
+                        <button class = "nxtBtn"><img src="icons\next.svg"></button>
+                </div>
+                <div class = "daysOfWeek">
+                    <ul class = "weekdays">
+                        <li>Monday</li>
+                        <li>Tuesday</li>
+                        <li>Wednesday</li>
+                        <li>Thursday</li>
+                        <li>Friday</li>
+                        <li>Saturday</li>
+                        <li>Sunday</li>
+                    </ul>
+                </div>
+
+                <ul class = "days">
+                    <li><div onclick = "openNotif()" class = "day lastmonth">1</div></li>
+                    <li><div onclick = "openNotif()" class = "day">2</div></li>
+                    <li><div onclick = "openNotif()" class = "day">3</div></li>
+                    <li><div onclick = "openNotif()" class = "day">4</div></li>
+                    <li><div onclick = "openNotif()" class = "day">5</div></li>
+                    <li><div onclick = "openNotif()" class = "day">6</div></li>
+                    <li><div onclick = "openNotif()" class = "day">7</div></li>
+                    <li><div onclick = "openNotif()" class = "day">8</div></li>
+                    <li><div onclick = "openNotif()" class = "day current">9</div></li>
+                    <li><div onclick = "openNotif()" class = "day">10</div></li>
+                    <li><div onclick = "openNotif()" class = "day">11</div></li>
+                    <li><div onclick = "openNotif()" class = "day">12</div></li>
+                    <li><div onclick = "openNotif()" class = "day">13</div></li>
+                    <li><div onclick = "openNotif()" class = "day">14</div></li>
+                    <li><div onclick = "openNotif()" class = "day">15</div></li>
+                    <li><div onclick = "openNotif()" class = "day">16</div></li>
+                    <li><div onclick = "openNotif()" class = "day">17</div></li>
+                    <li><div onclick = "openNotif()" class = "day deadline">18</div></li>
+                    <li><div onclick = "openNotif()" class = "day">19</div></li>
+                    <li><div onclick = "openNotif()" class = "day">20</div></li>
+                    <li><div onclick = "openNotif()" class = "day">21</div></li>
+                    <li><div onclick = "openNotif()" class = "day">22</div></li>
+                    <li><div onclick = "openNotif()" class = "day">23</div></li>
+                    <li><div onclick = "openNotif()" class = "day">24</div></li>
+                    <li><div onclick = "openNotif()" class = "day">25</div></li>
+                    <li><div onclick = "openNotif()" class = "day">26</div></li>
+                    <li><div onclick = "openNotif()" class = "day">27</div></li>
+                    <li><div onclick = "openNotif()" class = "day">28</div></li>
+                    <li><div onclick = "openNotif()" class = "day">29</div></li>
+                    <li><div onclick = "openNotif()" class = "day">30</div></li>
+                    <li><div onclick = "openNotif()" class = "day">31</div></li>
+                </ul>  
+            
+            </div>  
+        </div>
+    </div>
+    
+</body>

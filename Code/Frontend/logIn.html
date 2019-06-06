@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="login.css" />
+    <title>Epoka Unified System</title>
+    <script>
+        function sendData() {
+
+            var email = document.getElementById("email").value;
+            var pass = document.getElementById("pass").value;
+
+            var url = "";
+            request = new XMLHttpRequest();
+            
+            request.open('POST', 'http://localhost:3000/login', true);
+
+            request.onload = function () {
+                if (request.status >= 200 && request.status < 400) {
+                    // Success!
+                    data = JSON.parse(request.responseText);
+                } else {
+                    // We reached our target server, but it returned an error
+
+                }
+            };
+
+            request.onerror = function () {
+                // There was a connection error of some sort
+            };
+            request.setRequestHeader("Content-type", "application/json");
+            var res = "{'email':'".concat(email,"','password:'", pass, "'}");
+            request.send(res);
+            console.log(data);
+        }
+    </script>
+</head>
+
+<body>
+    <div class="logo">
+        <a style="margin-left: 0px;" href="logIn.php"><img src="icons\logo.svg" class="logo"></a>
+    </div>
+    <div class="container">
+        <div class="fields">
+
+            <input id="email" name="email" type="email" placeholder="E-mail" class="info"><br>
+            <input id="pass" name="pass" type="password" placeholder="Password" class="info"><br>
+
+            <input type="submit" value="Log In" onclick="sendData()"><br>
+            <a href="forgotPass.php">Forgot your password?</a>
+            <a href="register.php">Don't have an account?</a>
+        </div>
+    </div>
+
+</body>
+
+</html>

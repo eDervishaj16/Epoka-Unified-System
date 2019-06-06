@@ -1,0 +1,151 @@
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    background-color: #0088FF;
+}
+
+.main {
+    width: 85%;
+}
+
+hr {
+    margin-top: -30px;
+    width: 98%;
+    margin-left: 0px;
+}
+
+h1 {
+    color: white;
+    font-size: 42px;
+}
+
+.finishSoon{
+    margin-top: 10px;
+    margin-left: 50px;
+    height: 200px;
+}
+
+.notifications {
+    width: 100%;
+    margin-top: -30px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    padding-bottom: 10px;
+}
+
+.entry{
+    display: inline-block;
+    width: 346.5px;
+    margin-right: 10px;
+}
+
+h6 {
+    font-size: 16px;
+    text-align: center;
+    padding: 5px;
+    background-color: #0B30A9;
+    color: white;
+    border-radius: 20px 20px 0px 0px;
+}
+
+#desc {
+    padding: 20px;
+    margin-top: -38px;
+    color: #0B30A9;
+    background-color: white;
+    font-size: 12.6px;
+    white-space: normal;
+}
+
+p[id = "cntdown"]{
+    padding-bottom: 5px;
+    margin-top: -11.8px;
+    text-align: center;
+    color: #0B30A9;
+    background-color: white;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+div[id = "statusBar"]{
+    border-radius: 0px 0px 20px 20px;
+    margin-left: 0px;
+    margin-top: -20px;
+    width: 100%;
+    height: 10px;
+    background-color: white;
+}
+
+div[id = "remaining"]{
+    border-radius: 0px 0px 0px 20px;
+    width: 90%;
+    height: 10px;
+    background-image: linear-gradient(to right, red , orange);
+}
+
+/* Hidding the scroll bar */
+::-webkit-scrollbar {
+    height: 10px;      
+    width: 5px;              
+}
+
+::-webkit-scrollbar-thumb:horizontal{
+    background: white;
+    border-radius: 10px;
+}
+
+.notifContainer {
+    margin-top: 100px;
+    margin-left: 50px;
+}
+
+.filters {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.info{
+    margin-right: 100px;
+    margin-left: 5px;
+    padding-left: 10px;
+    font-size: 14px;
+    width: 143px;
+    height: 42px;
+    border-radius: 10px;
+    border: 1px solid #0B30A9;
+    box-shadow: 1px 1px 2px;
+}
+
+label {
+    color: white;
+    font-size: 25px;
+}
+
+.larger {
+    width: 97%;
+    display: block;
+    margin-bottom: 10px;
+}
+
+
+.title{
+    background-color: white;
+    color: #0B30A9;
+    font-weight: 600;
+    text-decoration: underline;
+    margin-top: -37px;
+    padding-left: 20px;
+    padding-top: 10px;
+    margin-bottom: 38px;
+    font-size: 14px;
+}
+
+.searchBtn {
+    position: absolute;
+    background-color: transparent;
+    margin-left: -150px;
+    border: 0px;
+}

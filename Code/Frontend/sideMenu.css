@@ -1,0 +1,91 @@
+/* Logo on the navigation Bar */
+.logo {
+    text-align: center;
+    color: white;
+}
+
+.logo img {
+    margin-top: 0px;
+    width: 70px;
+    text-align: center;
+}
+
+.logo p {
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 0px;
+    margin-bottom: 80px;
+}
+
+/* Logout button */
+.logout {
+    margin-top: -20px;
+    margin-left: 10px;
+}
+
+.logout img {
+    width: 30px;
+}
+
+.logout button {
+    background-color: transparent;
+    border: 0px;
+}
+
+.logout button:hover {
+    transform: scale(1.1);
+    background-color: red;
+}
+
+/* Side Navigation Bar*/
+.sidenav {
+    float: left;
+    height: 100%;
+    width: 15%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #0B30A9;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.sidenav a {
+    margin-bottom: 10px;
+    padding: 20px 20px 20px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+}
+
+.sidenav a:hover {
+    transform: scale(1.05);
+}
+
+@media screen and (max-height: 450px) {
+.sidenav {padding-top: 15px;}
+.sidenav a {font-size: 18px;}
+}
+
+.selected {
+    background-color:#356BFF;
+    font-weight: 700;
+    box-shadow: 7px 7px 1p;
+    border: 1px solid #0B30A9;
+}
+
+/* Links on the side menu */
+a img {
+    width: 22.4px;
+    margin-right: 10px;
+    margin-bottom: -13px;
+}
+
+
+.main {
+    width: 85%;
+    float: right;
+}
+

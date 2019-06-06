@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="42" height="55" viewBox="0 0 42 55">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        stroke: #fff;
+        stroke-width: 2px;
+        font-size: 25px;
+        font-family: IkonoMiniL1-1, "Ikono Mini L 1";
+      }
+    </style>
+  </defs>
+  <text id="LogOut" class="cls-1" transform="matrix(-1, 0, 0, 1, 21, 52)"><tspan x="-18.425" y="0"></tspan></text>
+</svg>

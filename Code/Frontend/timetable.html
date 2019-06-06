@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="timetable.css" />
+    <link rel="stylesheet" type="text/css" href="sideMenu.css" />
+    <title>Epoka Unified System</title>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Side Menu -->
+        <div class="sidenav">
+            <!-- Logout Button -->
+            <div class="logout">
+                <button><img src="icons\logout.svg"></button>
+            </div>
+            <!-- Epoka Logo -->
+            <div class="logo">
+                <img src="icons\logo.svg">
+                <p>Epoka Unified Systems</p>
+            </div>
+
+            <!-- Side Menu Links -->
+            <a href="notifications.html">
+                <img src="icons\notificationsBold.svg">
+                Notifications
+            </a>
+            <a href="calendar.html">
+                <img src="icons\calendar.svg">
+                Calendar
+            </a>
+            <a class="selected" href="timetable.html">
+                <img src="icons\timetableBold.svg">
+                Timetable
+            </a>
+            <a href="courses.html">
+                <img src="icons\courses.svg">
+                Courses
+            </a>
+            <a href="myProfile.html">
+                <img src="icons\myProfile.svg">
+                My Profile
+            </a>
+            <a href="setting.html">
+                <img src="icons\settings.svg">
+                Settings
+            </a>
+        </div>
+
+
+
+        <div class="main">
+
+            <div class="busTT">
+                <h1>Bus Timetable</h1>
+                <hr>
+                <label for="startPt">From:</label>
+                <select name="start" class="startPt">
+                    <option value="" selected disabled hidden>Select an Option</option>
+                    <option value="tr">Tirana</option>
+                    <option value="dr">Durres</option>
+                    <option value="ep">Epoka</option>
+                </select>
+                <label for="endPt">To:</label>
+                <select name="end" class="end">
+                    <option value="" selected disabled hidden>Select an Option</option>
+                    <option value="tr">Tirana</option>
+                    <option value="dr">Durres</option>
+                    <option value="ep">Epoka</option>
+                </select>
+
+                <div id="bussHours">
+                    <p class="currDay">
+                        Monday
+                    </p>
+                    <div class="hours">
+                        <div class="hr passed">
+                            7:40
+                        </div>
+                        <div class="hr passed">
+                            7:45
+                        </div>
+                        <div class="hr passed">
+                            8:45
+                        </div>
+                        <div class="hr passed">
+                            9:45
+                        </div>
+                        <div class="hr current">
+                            10:40
+                        </div>
+                        <div class="hr">
+                            11:45
+                        </div>
+                        <div class="hr">
+                            12:45
+                        </div>
+                        <div class="hr">
+                            13:45
+                        </div>
+                        <div class="hr">
+                            14:40
+                        </div>
+                        <div class="hr">
+                            15:45
+                        </div>
+                        <div class="hr">
+                            16:45
+                        </div>
+                        <div class="hr">
+                            17:45
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="todaySchedule">
+                <h1>Today</h1>
+                <hr>
+                <div class="schedule">
+                    <p class="currDay">
+                        Monday
+                    </p>
+                    <div class="todayCourse">
+                        <div class="course">
+                            <div class="courseTime">
+                                8:45 - 9:30
+
+                            </div>
+                            <div class="courseInfo">
+                                <p class="courseName">Computer Networks</p>
+                                <p class="courseClass">A 005</p>
+                            </div>
+                        </div>
+                        <div class="course">
+                            <div class="courseTime">
+                                8:45 - 9:30
+
+                            </div>
+                            <div class="courseInfo">
+                                <p class="courseName">Computer Networks</p>
+                                <p class="courseClass">A 005</p>
+                            </div>
+                        </div>
+                        <div class="course">
+                            <div class="courseTime">
+                                8:45 - 9:30
+
+                            </div>
+                            <div class="courseInfo">
+                                <p class="courseName">Computer Networks</p>
+                                <p class="courseClass">A 005</p>
+                            </div>
+                        </div>
+                        <div class="course">
+                            <div class="courseTime">
+                                8:45 - 9:30
+
+                            </div>
+                            <div class="courseInfo">
+                                <p class="courseName">Computer Networks</p>
+                                <p class="courseClass">A 005</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="upcomingSchedule">
+                <h1>Upcoming</h1>
+                <hr>
+                <div class="schedule">
+                    <p class="day off">
+                        Monday
+                    </p>
+                    <div class="upcomingCourse dayOff">
+                        <div class="course">
+                            <div class="courseTime">
+                                8:45 - 9:30
+
+                            </div>
+                            <div class="courseInfo">
+                                <p class="courseName">Computer Networks</p>
+                                <p class="courseClass">A 005</p>
+                            </div>
+                        </div>
+                        <div class="course">
+                            <div class="courseTime">
+                                8:45 - 9:30
+
+                            </div>
+                            <div class="courseInfo">
+                                <p class="courseName">Computer Networks</p>
+                                <p class="courseClass">A 005</p>
+                            </div>
+                        </div>
+                        <div class="course">
+                            <div class="courseTime">
+                                8:45 - 9:30
+
+                            </div>
+                            <div class="courseInfo">
+                                <p class="courseName">Computer Networks</p>
+                                <p class="courseClass">A 005</p>
+                            </div>
+                        </div>
+                        <div class="course">
+                            <div class="courseTime">
+                                8:45 - 9:30
+
+                            </div>
+                            <div class="courseInfo">
+                                <p class="courseName">Computer Networks</p>
+                                <p class="courseClass">A 005</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="schedule">
+                    <p class="day">
+                        Monday
+                    </p>
+                    <div class="upcomingCourse">
+                        <div class="course">
+                            <div class="courseTime">
+                                8:45 - 9:30
+
+                            </div>
+                            <div class="courseInfo">
+                                <p class="courseName">Computer Networks</p>
+                                <p class="courseClass">A 005</p>
+                            </div>
+                        </div>
+                        <div class="course">
+                            <div class="courseTime">
+                                8:45 - 9:30
+
+                            </div>
+                            <div class="courseInfo">
+                                <p class="courseName">Computer Networks</p>
+                                <p class="courseClass">A 005</p>
+                            </div>
+                        </div>
+                        <div class="course">
+                            <div class="courseTime">
+                                8:45 - 9:30
+
+                            </div>
+                            <div class="courseInfo">
+                                <p class="courseName">Computer Networks</p>
+                                <p class="courseClass">A 005</p>
+                            </div>
+                        </div>
+                        <div class="course">
+                            <div class="courseTime">
+                                8:45 - 9:30
+
+                            </div>
+                            <div class="courseInfo">
+                                <p class="courseName">Computer Networks</p>
+                                <p class="courseClass">A 005</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="schedule">
+                    <p class="day">
+                        Monday
+                    </p>
+                    <div class="upcomingCourse">
+                        <div class="course">
+                            <div class="courseTime">
+                                8:45 - 9:30
+
+                            </div>
+                            <div class="courseInfo">
+                                <p class="courseName">Computer Networks</p>
+                                <p class="courseClass">A 005</p>
+                            </div>
+                        </div>
+                        <div class="course">
+                            <div class="courseTime">
+                                8:45 - 9:30
+
+                            </div>
+                            <div class="courseInfo">
+                                <p class="courseName">Computer Networks</p>
+                                <p class="courseClass">A 005</p>
+                            </div>
+                        </div>
+                        <div class="course">
+                            <div class="courseTime">
+                                8:45 - 9:30
+
+                            </div>
+                            <div class="courseInfo">
+                                <p class="courseName">Computer Networks</p>
+                                <p class="courseClass">A 005</p>
+                            </div>
+                        </div>
+                        <div class="course">
+                            <div class="courseTime">
+                                8:45 - 9:30
+
+                            </div>
+                            <div class="courseInfo">
+                                <p class="courseName">Computer Networks</p>
+                                <p class="courseClass">A 005</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="schedule">
+                    <p class="day">
+                        Monday
+                    </p>
+                    <div class="upcomingCourse">
+                        <div class="course">
+                            <div class="courseTime">
+                                8:45 - 9:30
+
+                            </div>
+                            <div class="courseInfo">
+                                <p class="courseName">Computer Networks</p>
+                                <p class="courseClass">A 005</p>
+                            </div>
+                        </div>
+                        <div class="course">
+                            <div class="courseTime">
+                                8:45 - 9:30
+
+                            </div>
+                            <div class="courseInfo">
+                                <p class="courseName">Computer Networks</p>
+                                <p class="courseClass">A 005</p>
+                            </div>
+                        </div>
+                        <div class="course">
+                            <div class="courseTime">
+                                8:45 - 9:30
+
+                            </div>
+                            <div class="courseInfo">
+                                <p class="courseName">Computer Networks</p>
+                                <p class="courseClass">A 005</p>
+                            </div>
+                        </div>
+                        <div class="course">
+                            <div class="courseTime">
+                                8:45 - 9:30
+
+                            </div>
+                            <div class="courseInfo">
+                                <p class="courseName">Computer Networks</p>
+                                <p class="courseClass">A 005</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="schedule">
+                    <p class="day off">
+                        Monday
+                    </p>
+                    <div class="upcomingCourse dayOff">
+                        <div class="course">
+                            <div class="courseTime">
+                                8:45 - 9:30
+
+                            </div>
+                            <div class="courseInfo">
+                                <p class="courseName">Computer Networks</p>
+                                <p class="courseClass">A 005</p>
+                            </div>
+                        </div>
+                        <div class="course">
+                            <div class="courseTime">
+                                8:45 - 9:30
+
+                            </div>
+                            <div class="courseInfo">
+                                <p class="courseName">Computer Networks</p>
+                                <p class="courseClass">A 005</p>
+                            </div>
+                        </div>
+                        <div class="course">
+                            <div class="courseTime">
+                                8:45 - 9:30
+
+                            </div>
+                            <div class="courseInfo">
+                                <p class="courseName">Computer Networks</p>
+                                <p class="courseClass">A 005</p>
+                            </div>
+                        </div>
+                        <div class="course">
+                            <div class="courseTime">
+                                8:45 - 9:30
+
+                            </div>
+                            <div class="courseInfo">
+                                <p class="courseName">Computer Networks</p>
+                                <p class="courseClass">A 005</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
